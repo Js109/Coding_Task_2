@@ -4,11 +4,19 @@ It is about implementing a function called merge which takes a list of intervals
 All non-overlapping intervals remain untouched.
 
 ## Algorithm explanation
+<kbd>![image info](explanation_algorithm.png "Algorithm explanation")</kbd>
 
 ## What is the runtime of the program?
-Since Collections.sort(intervalList) has a complexity of O(n log n) and the for loop has a complexity of O(n) the total complexity is also O(n).
+Since Collections.sort(List<T>) has a complexity of O(n log n) and the for loop has a complexity of O(n) the total complexity is O(n log n).
 
 ## How can the robustness be ensured, especially with regard to very large inputs?
-For larger input data sets, one solution can be to split the list of intervals into separate lists of intervals and merge each of these sub-interval lists separately, then merge them again at the end and apply merge again. Keyword: Multithreading
+For larger input data sets, one solution may be to split the list of intervals into separate lists of intervals and handle each of these partial interval lists in separate threads. At the end, they must then be merged again piece by piece, which can also be done on separate threads depending on the size.
 
 ## How does the memory consumption of your program behave ?
+For the merge method:
+
+Collections.sort(List<T>) does not do in place sorting. It dumps the specified list into an array, sorts the array, and iterates over the list resetting each element from the corresponding position in the array. This leads to extra needed memory.
+
+The actual algorithm: A separate list is used for the result list, which takes up memory. But this is good programming style (best practices) not to operate on the output list.
+
+However, memory consumption using a list and operating on this list would save memory.

@@ -3,7 +3,7 @@ import mbti.coding.models.IntervalList;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestLogic {
+public class TestIntervalList {
     @Test
     public void testIntervalListMergeMethodBasicExample(){
         IntervalList intervalList = new IntervalList();
