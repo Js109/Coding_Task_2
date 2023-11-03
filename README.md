@@ -3,6 +3,13 @@ This is the repository to provide the Coding Task 2 solution of Julian Stier.
 It is about implementing a function called merge which takes a list of intervals and returns a list of intervals as well. The result contains all overlapping intervals that are merged. 
 All non-overlapping intervals remain untouched.
 
+## Setup instructions
+As a prerequisite, Java version 18 and Apache Maven 3.8.5 must be installed. However, the build may also work with older versions.
+Subsequently, ``` mvn clean install ```
+must be executed on the main folder.
+
+This process creates a target folder that contains a .jar file. This file must be executed.  
+
 ## Algorithm explanation
 <kbd>![image info](explanation_algorithm.png "Algorithm explanation")</kbd>
 
