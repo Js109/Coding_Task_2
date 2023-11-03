@@ -9,6 +9,7 @@ Subsequently, ``` mvn clean install ```
 must be executed on the main folder.
 
 This process creates a target folder that contains a .jar file. This file must be executed.  
+Alternatively you can start up the application through the main class and modify the input String there.
 
 ## Algorithm explanation
 <kbd>![image info](explanation_algorithm.png "Algorithm explanation")</kbd>
