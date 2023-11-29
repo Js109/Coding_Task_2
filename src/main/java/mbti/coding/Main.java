@@ -10,7 +10,6 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
-        // uncomment the following lines if you want to give another input
         Scanner stringScanner = new Scanner(System.in);
         boolean executed = false;
 
