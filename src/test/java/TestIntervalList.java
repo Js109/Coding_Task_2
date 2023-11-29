@@ -38,7 +38,7 @@ public class TestIntervalList {
     @Test
     public void testIntervalListMergeMethodBiggerDataSetPositiveAndNegativeNumbers(){
         IntervalList intervalList = new IntervalList();
-        intervalList.add(new Interval(10,15));
+        intervalList.add(new Interval(30,15));
         intervalList.add(new Interval(-6,-3));
         intervalList.add(new Interval(100, 121));
         intervalList.add(new Interval(-1,0));

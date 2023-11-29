@@ -9,8 +9,13 @@ public class Interval implements Comparable<Interval> {
     private int upperBound;
 
     public Interval(int lowerBound, int upperBound) {
-        this.lowerBound = lowerBound;
-        this.upperBound = upperBound;
+        if (lowerBound <= upperBound) {
+            this.lowerBound = lowerBound;
+            this.upperBound = upperBound;
+        } else {
+            this.lowerBound = upperBound;
+            this.upperBound = lowerBound;
+        }
     }
 
     public int getLowerBound() {

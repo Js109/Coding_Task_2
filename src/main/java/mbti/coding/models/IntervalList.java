@@ -18,14 +18,15 @@ public class IntervalList extends ArrayList<Interval> {
      */
     public IntervalList merge() {
         IntervalList intervalList = this;
-        // sort the interval list according to ascending order with comparison criterion lowerBound - defined in compareTo method in Interval class
-        Collections.sort(intervalList);
+        // return basic cases before sorting the list
         if (intervalList.isEmpty()) {
             return new IntervalList();
         }
         if (intervalList.size() == 1) {
             return intervalList;
         }
+        // sort the interval list according to ascending order with comparison criterion lowerBound - defined in compareTo method in Interval class
+        Collections.sort(intervalList);
 
         IntervalList resultIntervalList = new IntervalList();
         // Initialize current element to first interval
